@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TextInput, View, Image } from 'react-native';
+import { StyleSheet, Text, TextInput, View, Image, TouchableOpacity } from 'react-native';
 import Icons from "react-native-vector-icons/FontAwesome"
 
 
@@ -12,90 +12,75 @@ export default function App() {
      <Icons name="cart-plus" size={30} style={styles.icons}  />
      </View>
 
-     <View style={styles.text}>
-     <Text style={styles.txt}>Best Jacket</Text>
-     <View style={styles.search}>
-       <TextInput placeholder='Search Jacket' style={styles.searchtxt}></TextInput>
-     </View>
-     </View>
-
-
-    <View style={styles.Imagetext}>
-      <View style={styles.img}>
-      <Image style={styles.tinyimg}
+     <View style={styles.img}>
+     <Image style={styles.tinyimg}
         source={require('./assets/1.png')}
       />
+     </View>
+
+     <View style={styles.info}>
+       <Text style={styles.infotext}>Bike Jacket</Text>
+       <View style={styles.infostars}>
+         <Text style={styles.infostar}>Review  :</Text>
+         <Icons name="star" color={"gold"} size={15} style={styles.star}  />
+         <Icons name="star" color={"gold"} size={15} style={styles.star}  />
+         <Icons name="star" color={"gold"} size={15} style={styles.star}  />
+         <Icons name="star" color={"gold"} size={15} style={styles.star}  />
+         <Icons name="star" color={"grey"} size={15} style={styles.star}  />
+       </View>
+       <View style={styles.line}></View>
+       <View>
+         <Text style={styles.infotxt}>It is a long established fact that reader will be distracted 
+         by the readable content of a page.</Text>
+       </View>
+
+
+       <View style={styles.box}>
+         <Text style={styles.boxtext}>
+           Material:91% polyester, 9% elastane
+         </Text>
+       </View>
+     </View>
+
+
+     <View style={styles.sizes}>
+      <View style={styles.size}>
+        <Text style={styles.sizetext}>XS</Text>
       </View>
 
-      <View style={styles.textstar}>
-      <Text style={styles.imgtxt}>Bike Jacket</Text>
-      <Icons name="star" color={"gold"} size={15} style={styles.star}  />
-      <Icons name="star" color={"gold"} size={15} style={styles.star2}  />
-      <Icons name="star" color={"gold"} size={15} style={styles.star3}  />
-      <Icons name="star" color={"gold"} size={15} style={styles.star4}  />
-      <Icons name="star" color={"grey"} size={15} style={styles.star5}  />
-      <Text style={styles.amt}>$99</Text>
+      <View style={styles.size}>
+        <Text style={styles.sizetext}>S</Text>
       </View>
-      
+
+      <View style={styles.sizesc}>
+        <Text style={styles.sizetxt}>M</Text>
+      </View>
+
+      <View style={styles.size}>
+        <Text style={styles.sizetext}>L</Text>
+      </View>
+
+      <View style={styles.size}>
+        <Text style={styles.sizetext}>XL</Text>
+      </View>
+     </View>
+
+
+    
+
+    <View style={styles.add}>
+      <View>
+    <Text style={styles.addtext}>Total Amount</Text>
+    <Text style={styles.addtxt}>$110</Text>
+    </View>
+    <TouchableOpacity style={styles.addbtn}>
+      <Text style={styles.btntxt}>Add to Cart</Text>
+    </TouchableOpacity>
     </View>
 
 
-    <View style={styles.Imagetext}>
-      <View style={styles.img}>
-      <Image style={styles.tinyimg}
-        source={require('./assets/2.png')}
-      />
-      </View>
+   
 
-      <View style={styles.textstar}>
-      <Text style={styles.imgtxt}>Sport Jacket</Text>
-      <Icons name="star" color={"gold"} size={15} style={styles.star}  />
-      <Icons name="star" color={"gold"} size={15} style={styles.star2}  />
-      <Icons name="star" color={"gold"} size={15} style={styles.star3}  />
-      <Icons name="star" color={"grey"} size={15} style={styles.star4}  />
-      <Icons name="star" color={"grey"} size={15} style={styles.star5}  />
-      <Text style={styles.amt}>$80</Text>
-      </View>
-      
-    </View>
-
-    <View style={styles.Imagetext}>
-      <View style={styles.img}>
-      <Image style={styles.tinyimg}
-        source={require('./assets/3.png')}
-      />
-      </View>
-
-      <View style={styles.textstar}>
-      <Text style={styles.imgtxt}>House Jacket</Text>
-      <Icons name="star" color={"gold"} size={15} style={styles.star}  />
-      <Icons name="star" color={"gold"} size={15} style={styles.star2}  />
-      <Icons name="star" color={"gold"} size={15} style={styles.star3}  />
-      <Icons name="star" color={"gold"} size={15} style={styles.star4}  />
-      <Icons name="star" color={"gold"} size={15} style={styles.star5}  />
-      <Text style={styles.amt}>$140</Text>
-      </View>
-      
-    </View>
-
-    <View style={styles.Imagetext}>
-      <View style={styles.img}>
-      <Image style={styles.tinyimg}
-        source={require('./assets/4.png')}
-      />
-      </View>
-
-      <View style={styles.textstar}>
-      <Text style={styles.imgtxt}>Kitchen Jacket</Text>
-      <Icons name="star" color={"gold"} size={15} style={styles.star}  />
-      <Icons name="star" color={"gold"} size={15} style={styles.star2}  />
-      <Icons name="star" color={"gold"} size={15} style={styles.star3}  />
-      <Icons name="star" color={"gold"} size={15} style={styles.star4}  />
-      <Icons name="star" color={"grey"} size={15} style={styles.star5}  />
-      <Text style={styles.amt}>$115</Text>
-      </View>
-      
-    </View>
 
 
       <StatusBar style="auto" />
@@ -120,103 +105,134 @@ const styles = StyleSheet.create({
     marginLeft: 300,
   },
 
-  text: {
-    paddingHorizontal: 16,
-    flexDirection: "column",
-  },
-
-  txt: {
-    marginTop: 15,
-    fontSize: 30,
-    fontWeight: "bold"
-  },
-
-  search: {
-    backgroundColor: "white",
-    height: 40,
-    borderRadius: 20,
-    paddingLeft: 15,
-    paddingTop: 5,
-   marginTop: 5,
-   
-  },
-
-  searchtxt: {
-    fontSize: 15
-  },
-
-  Imagetext: {
-    marginTop: 20,
-    flexDirection: "row"
-  },
-
   img: {
-backgroundColor: "white",
-width: 100,
-borderRadius: 20,
-
+    backgroundColor: "white",
+    height: 170,
+    width: 170,
+    borderRadius: 50,
+    marginTop: 30,
+    alignSelf: "center"
   },
 
   tinyimg: {
-    height: 100,
-    width: 100,
+    height: 170,
+    width: 170,
   },
 
-  textstar: {
+  infotext: {
+    fontSize: 25,
+    paddingHorizontal: 16,
+    marginTop: 20,
+
+  },
+
+  infostars: {
+    paddingHorizontal: 16,
+    flexDirection: "row"
+  },
+  star: {
+    marginTop: 3,
+    marginLeft: 5
+  },
+
+  line: {
+    height: 5,
+    width: 50,
+    marginLeft: 16,
+    marginTop: 15,
+    backgroundColor: "#757def"
+  },
+
+  infotxt: {
+    paddingHorizontal: 16,
+    marginTop: 10,
+    fontSize: 15,
+  },
+
+  box: {
+    backgroundColor: "white",
+    height: 50,
+    marginTop: 15,
+    marginLeft: 16,
+  },
+
+  boxtext: {
+    padding: 10,
+    fontSize: 20,
+    color: "#757def"
+  },
+
+  sizes: {
+   flexDirection: "row",
+   marginTop: 15,
+   marginLeft: 8
+  },
+
+  size: {
+    backgroundColor: "white",
+    height: 50,
+    width: 50,
+    borderRadius: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    marginLeft: 10
+  },
+
+  sizetext: {
+    fontSize: 20
+  },
+
+  sizesc: {
+    backgroundColor: "#757def",
+    height: 50,
+    width: 50,
+    borderRadius: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    marginLeft: 20
+  },
+
+  sizetxt: {
+    color: "white",
+    fontSize: 20
+  },
+
+  add: {
+    backgroundColor: "#757def",
+    height: 70,
+    marginLeft: 16,
+    borderRadius: 16,
+    marginTop: 15,
     flexDirection: "row"
   },
 
-  imgtxt: {
-    padding: 15,
-    fontSize: 20,
+  addtext: {
+    paddingHorizontal: 16,
+    color: "white",
+    marginTop: 6
   },
 
-
-  star: {
-    marginLeft: 20,
-    marginTop:42,
-    position: "absolute"
+  addtxt: {
+    paddingHorizontal: 16,
+    color: "white",
+    fontSize: 25
   },
 
-
-  star2: {
-    marginLeft: 20,
-    marginTop:42,
-    position: "absolute",
-    left: 20
+  addbtn: {
+    backgroundColor: "blue",
+    height: 50,
+    width: 110,
+    borderRadius: 12,
+    marginLeft: 80,
+    marginTop: 10 
+  
   },
 
-
-  star3: {
-    marginLeft: 20,
-    marginTop:42,
-    position: "absolute",
-    left: 40
-  },
-
-
-  star4: {
-    marginLeft: 20,
-    marginTop:42,
-    position: "absolute",
-    left: 60
-  },
-
-
-  star5: {
-    marginLeft: 20,
-    marginTop:42,
-    position: "absolute",
-    left: 80
-  },
-
-  amt: {
-    color: "#757def",
-    fontSize: 20,
-    position: "absolute",
-    top: 70,
-    left: 15,
-    fontWeight: "bold"
+  btntxt: {
+   marginLeft: 10,
+    color: "white",
+    fontSize: 18,
+    marginTop: 10
   }
 
 });
